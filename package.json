@@ -2,9 +2,12 @@
   "name": "with-apollo",
   "version": "2.0.0",
   "scripts": {
+    "mock": "npm start --prefix mock",
+    "dev-mock": "GRAPHQL_ENDPOINT=\"http://localhost:4000/\" run-p dev mock",
     "dev": "next",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "postinstall": "npm install --prefix mock"
   },
   "dependencies": {
     "@apollo/react-hooks": "3.0.0",
@@ -22,6 +25,7 @@
   },
   "license": "ISC",
   "devDependencies": {
-    "babel-plugin-graphql-tag": "^2.5.0"
+    "babel-plugin-graphql-tag": "^2.5.0",
+    "npm-run-all": "^4.1.5"
   }
 }
