@@ -30,7 +30,13 @@ const server = new ApolloServer({
   mocks: {
     DateTime: () => {
       return new Date();
-    }
+    },
+    User: () => {
+      return {
+        firstName: "Kouki",
+        lastName: "Saito",
+      }
+    },
   }
 });
 
